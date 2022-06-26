@@ -38,7 +38,7 @@ def bfs(n,path_l):      # 시작점 ,빈 리스트 추가
     
     if not k < len(path_l):
         
-        path_l = bfs(path_l[k],path_l)
+        path_l = bfs(path_l[k+1],path_l)
      
     return path_l
 """
