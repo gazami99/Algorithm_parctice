@@ -29,18 +29,23 @@ def bfs(n,path_l):      # 시작점 ,빈 리스트 추가
 """
 재귀형 bfs
 
-    path_l.append(n)    
+    
+    if not path_l:
+        path_l.append(n)  
+        
     for i in graph[n]:     
         if not i in path_l: 
             path_l.append(i)  
     
     k =  path_l.index(n)
-    
-    if not k < len(path_l):
+
+    if k < (len(path_l)-1):
         
         path_l = bfs(path_l[k+1],path_l)
+    
      
     return path_l
+
 """
 
 
