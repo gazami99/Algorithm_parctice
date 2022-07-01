@@ -1,15 +1,17 @@
 from sys import stdin
 _ = stdin.readline()
-N = map(int,stdin.readline().split())
+n = list(map(int,stdin.readline().split()))
 _ = stdin.readline()
-M = map(int,stdin.readline().split())
-
-hashmap = {}
-for i in N:
-    if i in hashmap:
-        hashmap[i] += 1
-    else:
-        hashmap[i] = 1
+m = list(map(int,stdin.readline().split()))
 
 
-print(" ".join(str(hashmap[m]) if m in hashmap else '0' for m in M))
+dict_m = {i:0 for i in m}
+
+
+for i in n:
+    
+    if i in dict_m:
+        
+        dict_m[i] = dict_m[i] + 1
+        
+print(' '.join(str(dict_m[i]) for i in m))
